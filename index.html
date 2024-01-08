@@ -1,0 +1,57 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1 class="fw-bold text-center mt-5 colorh">CRUD PROJECT</h1>
+
+    <div class="p-5 mx-auto bg-light  w-75 mt-5">
+
+        <label for="productInputName" class="fw-bolder mb-2">Name : </label>
+        <input type="text" oninput="validateInput()" class="form-control mb-3 py-2" id="productInputName" >
+        
+        <label for="productInputPrice" class="fw-bolder mb-2">Price : </label>
+        <input type="number" class="form-control mb-3 py-2" id="productInputPrice">
+        
+        <label for="productInputDescripion" class="fw-bolder mb-2">Descripion : </label>
+        <textarea type="text" class="form-control mb-3 py-2" id="productInputDescripion"></textarea>
+        
+        <button id="addBtn" class="btn btn-info " onclick="dataIn();">add Product </button>
+        <button id="updateBtn" class="btn btn-primary d-none "  onclick="upadateData(temp);">update </button>
+
+    </div>
+
+    <div class="mt-5 w-50 m-auto  bg-light px-5 pb-2 ">
+        <label for="searchWord" class="fw-bolder mb-2">searchWord : </label>
+        <input type="text" oninput="searchProduct(this.value)"  class="form-control mb-3 py-2" id="searchWord" >
+    </div>
+
+    <div class="  p-5 ">
+       <table class=" table w-75 mx-auto text-center">
+        <thead>
+            <th>number</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>delete / update</th>
+        </thead>
+        <tbody id="viewProduct">
+           
+        </tbody>
+       </table>
+
+    </div>
+   
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
